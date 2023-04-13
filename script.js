@@ -1,14 +1,15 @@
-function myfun() {
-	
-	var newTodo = document.getElementById("newTodoInput").value;
+
+let addTodoBtn = document.getElementById("addTodoBtn");
+
+ addTodoBtn.addEventListener("click",()=>{
+	let newTodoInput = document.getElementById("newTodoInput").value;
 	 var listItem = document.createElement("li");
-	if(newTodo == ""){
-		alert("type something");
+	listItem.textContent = newTodoInput;
+	todoList.append(listItem);
+	if(newTodoInput !== ""){
+		document.getElementById("list").innerHTML = newTodoInput;
 	}
-	else{
-	listItem.textContent = newTodo;
-	var todoList = document.getElementById("todoList");
-	  todoList.append(listItem);
-}
-}
+})
+	
+
 
